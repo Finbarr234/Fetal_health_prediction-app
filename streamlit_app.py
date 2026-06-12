@@ -9,7 +9,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/Finbarr234/Fetal_health_pred
 df
 
 st.write('**x**')
-X = df.drop('fetal_health', axis=1)
+x = df.drop('fetal_health', axis=1)
 x
 
 st.write('**y**')
