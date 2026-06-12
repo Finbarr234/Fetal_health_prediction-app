@@ -19,4 +19,6 @@ y
 with st.expander('data visualization'):
   st.scatter_chart(data=df, x='fetal_health', y='fetal_health', color='fetal_health')
 
-rf_model.pkl
+import joblib
+
+rf_model = joblib.load("rf_model.pkl")
