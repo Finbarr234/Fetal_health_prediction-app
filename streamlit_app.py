@@ -17,4 +17,4 @@ y = df['fetal_health']
 y
 
 with st.expander('data visualization'):
-  st.scatter_chart(data=df, x='fetal_health', y='fetal_health', color'fetal_health')
+  st.scatter_chart(data=df, x='fetal_health', y='fetal_health', color='fetal_health')
