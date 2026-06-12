@@ -22,3 +22,7 @@ with st.expander('data visualization'):
 import joblib
 
 rf_model = joblib.load("rf_model.pkl")
+
+import joblib
+
+rf_model = joblib.load("rf_model.pkl")
