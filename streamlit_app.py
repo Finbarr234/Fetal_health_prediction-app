@@ -7,3 +7,11 @@ with st.expander('data'):
   st.write('**Raw data**')
 df = pd.read_csv("https://raw.githubusercontent.com/Finbarr234/Fetal_health_prediction-app/master/fetalhealth%20(1).csv")
 df
+
+st.write('**x**')
+x = df.drop('baseline', axis=1)
+x
+
+st.write('**y**')
+y = df.baseline
+y
