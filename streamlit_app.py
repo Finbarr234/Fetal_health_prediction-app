@@ -23,6 +23,12 @@ import joblib
 
 rf_model = joblib.load("rf_model.pkl")
 
+prediction = rf_model.predict_proba(input_data)
+
+st.write(
+    f"The model predicts a {max(prediction[0])*100:.2f}% probability of the predicted fetal health class."
+)
+
 import joblib
 
 rf_model = joblib.load("rf_model.pkl")
