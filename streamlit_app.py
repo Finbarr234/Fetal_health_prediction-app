@@ -19,16 +19,29 @@ y
 with st.expander('data visualization'):
   st.scatter_chart(data=df, x='fetal_health', y='fetal_health', color='fetal_health')
 
-import joblib
+import streamlit as st
+import pandas as pd
 
-rf_model = joblib.load("rf_model.pkl")
+st.title('🎈 Fetal Health Prediction App')
 
-prediction = rf_model.predict_proba(input_data)
+st.info('This is a fetal health prediction app!')
 
-st.write(
-    f"The model predicts a {max(prediction[0])*100:.2f}% probability of the predicted fetal health class."
+df = pd.read_csv(
+"https://raw.githubusercontent.com/Finbarr234/Fetal_health_prediction-app/master/fetalhealth%20(1).csv"
 )
 
-import joblib
+with st.expander('Data'):
+st.write('Raw Data')
+st.dataframe(df.head())
 
+st.write('Features (X)')
+x = df.drop('fetal_health', axis=1)
+st.dataframe(x.head())
+
+st.write('Target (y)')
+y = df['fetal_health']
+st.write(y.head())
+
+with st.expander('Data Visualization'):
+st.bar_chart(df['fetal_health'].value_counts())
 rf_model = joblib.load("rf_model.pkl")
