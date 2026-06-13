@@ -31,8 +31,8 @@ df = pd.read_csv(
 )
 
 with st.expander('Data'):
-st.write('Raw Data')
-st.dataframe(df.head())
+     st.write('Raw Data')
+     st.dataframe(df.head())
 
 st.write('Features (X)')
 x = df.drop('fetal_health', axis=1)
@@ -43,4 +43,4 @@ y = df['fetal_health']
 st.write(y.head())
 
 with st.expander('Data Visualization'):
-st.bar_chart(df['fetal_health'].value_counts())
+     st.bar_chart(df['fetal_health'].value_counts())
