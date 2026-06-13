@@ -44,4 +44,3 @@ st.write(y.head())
 
 with st.expander('Data Visualization'):
 st.bar_chart(df['fetal_health'].value_counts())
-rf_model = joblib.load("rf_model.pkl")
